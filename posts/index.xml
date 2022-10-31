@@ -31,7 +31,7 @@
       <pubDate>Mon, 26 Sep 2022 16:41:42 +0800</pubDate>
       
       <guid>http://example.org/posts/common-curl/</guid>
-      <description>常見curl指令 POST application/json curl -X POST http://localhost:3000/data \ -d &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39; \ -H &amp;#34;Content-Type: application/json&amp;#34; form data curl -X POST http://localhost:3000/data \ -H &amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34; \ -d &amp;#34;key1=value1&amp;amp;key2=value2&amp;#34; with a data fail curl -d &amp;#34;@data.json&amp;#34; -X POST http://localhost:3000/data Websocket curl -i -N -H &amp;#34;Connection: Upgrade&amp;#34; -H &amp;#34;Upgrade: websocket&amp;#34; -H &amp;#34;Host: localhost:8080&amp;#34; -H &amp;#34;Origin: http://localhost:8080&amp;#34; http://localhost:8080/my-websocket-path </description>
+      <description>常見curl指令 POST application/json curl -X POST http://localhost:3000/data \ -d &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39; \ -H &amp;#34;Content-Type: application/json&amp;#34; form data curl -X POST http://localhost:3000/data \ -H &amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34; \ -d &amp;#34;key1=value1&amp;amp;key2=value2&amp;#34; with a data fail curl -d &amp;#34;@data.json&amp;#34; -X POST http://localhost:3000/data </description>
     </item>
     
     <item>
