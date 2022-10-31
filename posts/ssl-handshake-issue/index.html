@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>SSL Handshake Issue | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.">
+    <meta name="generator" content="Hugo 0.99.1" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="SSL Handshake Issue" />
+<meta property="og:description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/ssl-handshake-issue/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-23T12:47:27+08:00" />
+<meta property="article:modified_time" content="2022-09-23T12:47:27+08:00" />
+
+<meta itemprop="name" content="SSL Handshake Issue">
+<meta itemprop="description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10."><meta itemprop="datePublished" content="2022-09-23T12:47:27+08:00" />
+<meta itemprop="dateModified" content="2022-09-23T12:47:27+08:00" />
+<meta itemprop="wordCount" content="184">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SSL Handshake Issue"/>
+<meta name="twitter:description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">SSL Handshake Issue</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-09-23T12:47:27+08:00">September 23, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="問題描述">問題描述</h2>
+<p>廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>2022/09/22 02:39:06 <span style="color:#f92672">[</span>warn<span style="color:#f92672">]</span> 248#248: *65138446 upstream server temporarily disabled <span style="color:#66d9ef">while</span> SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: <span style="color:#e6db74">&#34;GET / HTTP/1.1&#34;</span>, upstream: <span style="color:#e6db74">&#34;https://10.YYY.YYY.YYY:443/&#34;</span>, host: <span style="color:#e6db74">&#34;self.backend.com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2022/09/22 02:39:06 <span style="color:#f92672">[</span>error<span style="color:#f92672">]</span> 248#248: *65138446 SSL_do_handshake<span style="color:#f92672">()</span> failed <span style="color:#f92672">(</span>SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80<span style="color:#f92672">)</span> <span style="color:#66d9ef">while</span> SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: <span style="color:#e6db74">&#34;GET / HTTP/1.1&#34;</span>, upstream: <span style="color:#e6db74">&#34;https://10.YYY.YYY.YYY:443/&#34;</span>, host: <span style="color:#e6db74">&#34;self.backend.com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2022/09/22 02:39:06 <span style="color:#f92672">[</span>warn<span style="color:#f92672">]</span> 248#248: *65138446 upstream server temporarily disabled <span style="color:#66d9ef">while</span> SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: <span style="color:#e6db74">&#34;GET / HTTP/1.1&#34;</span>, upstream: <span style="color:#e6db74">&#34;https://10.YYY.YYY.YYY:443/&#34;</span>, host: <span style="color:#e6db74">&#34;self.backend.com&#34;</span>
+</span></span></code></pre></div><h2 id="解決方法">解決方法</h2>
+<h3 id="原本nginx-setting">原本Nginx setting</h3>
+<pre tabindex="0"><code>server {
+	listen 80;
+	listen [::]:80;
+
+	server_name self.backend.com;
+
+	location / {
+		proxy_pass https://new.cdn.com;
+		proxy_http_version	1.1;
+		proxy_cache_bypass	$http_upgrade;
+
+		proxy_set_header Upgrade			$http_upgrade;
+		proxy_set_header Connection 		&#34;upgrade&#34;;
+		proxy_set_header Host				$host;
+		proxy_set_header X-Forwarded-Proto	$scheme;
+		proxy_set_header X-Forwarded-Host	$host;
+		proxy_set_header X-Forwarded-Port	$server_port;
+	}
+}
+</code></pre><h3 id="更改後">更改後</h3>
+<pre tabindex="0"><code>upstream core {
+	server new.cdn.com:443 max_fails=3;
+	keepalive 256;
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name self.backend.com;
+
+	set $core &#34;new.cdn.com&#34;;
+	location / {
+		proxy_pass https://new.cdn.com;
+		proxy_http_version	1.1;
+		proxy_cache_bypass	$http_upgrade;
+
+		proxy_set_header Upgrade			$http_upgrade;
+		proxy_set_header Connection 		&#34;upgrade&#34;;
+		proxy_set_header Host				$core;
+		proxy_set_header X-Forwarded-Proto	$scheme;
+		proxy_set_header X-Forwarded-Host	$host;
+		proxy_set_header X-Forwarded-Port	$server_port;
+        proxy_ssl_server_name on;
+		proxy_ssl_session_reuse on;
+	}
+}
+</code></pre><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  My New Hugo Site 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
