@@ -7,8 +7,8 @@
     <title>SSL Handshake Issue | My New Hugo Site</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
-2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.">
-    <meta name="generator" content="Hugo 0.99.1" />
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.">
+    <meta name="generator" content="Hugo 0.104.3" />
     
     
     
@@ -32,7 +32,7 @@
     
     <meta property="og:title" content="SSL Handshake Issue" />
 <meta property="og:description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
-2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10." />
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ssl-handshake-issue/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-23T12:47:27+08:00" />
@@ -40,18 +40,18 @@
 
 <meta itemprop="name" content="SSL Handshake Issue">
 <meta itemprop="description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
-2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10."><meta itemprop="datePublished" content="2022-09-23T12:47:27+08:00" />
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10."><meta itemprop="datePublished" content="2022-09-23T12:47:27+08:00" />
 <meta itemprop="dateModified" content="2022-09-23T12:47:27+08:00" />
 <meta itemprop="wordCount" content="184">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SSL Handshake Issue"/>
 <meta name="twitter:description" content="問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
-2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10."/>
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &#34;GET / HTTP/1.1&#34;, upstream: &#34;https://10.YYY.YYY.YYY:443/&#34;, host: &#34;self.backend.com&#34; 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10."/>
 
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white DEV">
 
     
    

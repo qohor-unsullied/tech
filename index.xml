@@ -22,7 +22,7 @@
       <pubDate>Tue, 27 Sep 2022 16:48:12 +0800</pubDate>
       
       <guid>http://example.org/posts/common-docker/</guid>
-      <description>常見docker指令 Image list images docker images pull images docker pull debian pull an image by digest docker pull ubuntu:20.04 pull from a different registry docker pull myregistry.local:5000/testing/test-image remove images docker rmi [IMAGE_ID] Continer run container at backgroud docker run -d --restart=always --network=host debian list container docker ps execute an interactive shell # --interactive , -i Keep STDIN open even if not  # --tty , -t	Allocate a pseudo-TTY docker exec -it [CONTAINER_ID] [bash/sh] Stop a container docker stop [CONTAINER_ID] # --time , -t Seconds to wait for stop before killing it, default=10 docker stop -t 30 [CONTAINER_ID] </description>
+      <description>常見docker指令 Image list images docker images pull images docker pull debian pull an image by digest docker pull ubuntu:20.04 pull from a different registry docker pull myregistry.local:5000/testing/test-image remove images docker rmi [IMAGE_ID] Continer run container at backgroud docker run -d --restart=always --network=host debian list container docker ps execute an interactive shell # --interactive , -i Keep STDIN open even if not # --tty , -t	Allocate a pseudo-TTY docker exec -it [CONTAINER_ID] [bash/sh] Stop a container docker stop [CONTAINER_ID] # --time , -t Seconds to wait for stop before killing it, default=10 docker stop -t 30 [CONTAINER_ID] </description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Mon, 26 Sep 2022 16:41:42 +0800</pubDate>
       
       <guid>http://example.org/posts/common-curl/</guid>
-      <description>常見curl指令 POST application/json curl -X POST http://localhost:3000/data \  -d &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39; \  -H &amp;#34;Content-Type: application/json&amp;#34; form data curl -X POST http://localhost:3000/data \  -H &amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34; \  -d &amp;#34;key1=value1&amp;amp;key2=value2&amp;#34; with a data fail curl -d &amp;#34;@data.json&amp;#34; -X POST http://localhost:3000/data </description>
+      <description>常見curl指令 POST application/json curl -X POST http://localhost:3000/data \ -d &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39; \ -H &amp;#34;Content-Type: application/json&amp;#34; form data curl -X POST http://localhost:3000/data \ -H &amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34; \ -d &amp;#34;key1=value1&amp;amp;key2=value2&amp;#34; with a data fail curl -d &amp;#34;@data.json&amp;#34; -X POST http://localhost:3000/data Websocket curl -i -N -H &amp;#34;Connection: Upgrade&amp;#34; -H &amp;#34;Upgrade: websocket&amp;#34; -H &amp;#34;Host: localhost:8080&amp;#34; -H &amp;#34;Origin: http://localhost:8080&amp;#34; http://localhost:8080/my-websocket-path </description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ apt-get install vim Reading package lists... Done Building dependency tree Readi
       
       <guid>http://example.org/posts/ssl-handshake-issue/</guid>
       <description>問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
-2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &amp;#34;GET / HTTP/1.1&amp;#34;, upstream: &amp;#34;https://10.YYY.YYY.YYY:443/&amp;#34;, host: &amp;#34;self.backend.com&amp;#34;  2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &amp;#34;GET / HTTP/1.1&amp;#34;, upstream: &amp;#34;https://10.YYY.YYY.YYY:443/&amp;#34;, host: &amp;#34;self.backend.com&amp;#34;  2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.</description>
+2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &amp;#34;GET / HTTP/1.1&amp;#34;, upstream: &amp;#34;https://10.YYY.YYY.YYY:443/&amp;#34;, host: &amp;#34;self.backend.com&amp;#34; 2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &amp;#34;GET / HTTP/1.1&amp;#34;, upstream: &amp;#34;https://10.YYY.YYY.YYY:443/&amp;#34;, host: &amp;#34;self.backend.com&amp;#34; 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.</description>
     </item>
     
   </channel>
