@@ -7,7 +7,7 @@
     <title>My New Hugo Site</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.104.3" />
+    <meta name="generator" content="Hugo 0.105.0">
     
     
     
@@ -37,7 +37,7 @@
     <meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://example.org/posts/" />
+<meta property="og:url" content="https://qohor-unsullied.github.io/posts/" />
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
@@ -94,6 +94,23 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/common-gcp/" class="link black dim">
+        Common Gcp
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      常見GCP指令 Storage change acl gsutil -m acl set -R -a public-read gs://bucket/folder 
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/common-nginx/" class="link black dim">
         Common Nginx
       </a>
@@ -133,7 +150,7 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      常見curl指令 POST application/json curl -X POST http://localhost:3000/data \ -d &#39;{&#34;key1&#34;:&#34;value1&#34;, &#34;key2&#34;:&#34;value2&#34;}&#39; \ -H &#34;Content-Type: application/json&#34; form data curl -X POST http://localhost:3000/data \ -H &#34;Content-Type: application/x-www-form-urlencoded&#34; \ -d &#34;key1=value1&amp;key2=value2&#34; with a data fail curl -d &#34;@data.json&#34; -X POST http://localhost:3000/data 
+      常見curl指令 POST application/json curl -X POST http://localhost:3000/data \ -d &#39;{&#34;key1&#34;:&#34;value1&#34;, &#34;key2&#34;:&#34;value2&#34;}&#39; \ -H &#34;Content-Type: application/json&#34; form data curl -X POST http://localhost:3000/data \ -H &#34;Content-Type: application/x-www-form-urlencoded&#34; \ -d &#34;key1=value1&amp;key2=value2&#34; with a data fail curl -d &#34;@data.json&#34; -X POST http://localhost:3000/data Websocket curl -i -N -H &#34;Connection: Upgrade&#34; -H &#34;Upgrade: websocket&#34; -H &#34;Host: localhost:8080&#34; -H &#34;Origin: http://localhost:8080&#34; http://localhost:8080/my-websocket-path 
     </div>
   </div>
 </div>
@@ -181,7 +198,7 @@ apt-get install vim Reading package lists... Done Building dependency tree Readi
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://qohor-unsullied.github.io/" >
     &copy;  My New Hugo Site 2022 
   </a>
     <div>
