@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>https://qohor-unsullied.github.io/posts/</link>
+    <link>https://qohor-unsullied.github.io/try/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Oct 2022 14:48:21 +0800</lastBuildDate><atom:link href="https://qohor-unsullied.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Oct 2022 14:48:21 +0800</lastBuildDate><atom:link href="https://qohor-unsullied.github.io/try/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Common Gcp</title>
-      <link>https://qohor-unsullied.github.io/posts/common-gcp/</link>
+      <link>https://qohor-unsullied.github.io/try/posts/common-gcp/</link>
       <pubDate>Sun, 23 Oct 2022 14:48:21 +0800</pubDate>
       
-      <guid>https://qohor-unsullied.github.io/posts/common-gcp/</guid>
+      <guid>https://qohor-unsullied.github.io/try/posts/common-gcp/</guid>
       <description>常見GCP指令 Storage change acl gsutil -m acl set -R -a public-read gs://bucket/folder </description>
     </item>
     
     <item>
       <title>Common Nginx</title>
-      <link>https://qohor-unsullied.github.io/posts/common-nginx/</link>
+      <link>https://qohor-unsullied.github.io/try/posts/common-nginx/</link>
       <pubDate>Wed, 28 Sep 2022 17:32:37 +0800</pubDate>
       
-      <guid>https://qohor-unsullied.github.io/posts/common-nginx/</guid>
+      <guid>https://qohor-unsullied.github.io/try/posts/common-nginx/</guid>
       <description>常見nginx指令 Restart /etc/init.d/nginx reload </description>
     </item>
     
     <item>
       <title>Common Docker</title>
-      <link>https://qohor-unsullied.github.io/posts/common-docker/</link>
+      <link>https://qohor-unsullied.github.io/try/posts/common-docker/</link>
       <pubDate>Tue, 27 Sep 2022 16:48:12 +0800</pubDate>
       
-      <guid>https://qohor-unsullied.github.io/posts/common-docker/</guid>
+      <guid>https://qohor-unsullied.github.io/try/posts/common-docker/</guid>
       <description>常見docker指令 Image list images docker images pull images docker pull debian pull an image by digest docker pull ubuntu:20.04 pull from a different registry docker pull myregistry.local:5000/testing/test-image remove images docker rmi [IMAGE_ID] Continer run container at backgroud docker run -d --restart=always --network=host debian list container docker ps execute an interactive shell # --interactive , -i Keep STDIN open even if not # --tty , -t	Allocate a pseudo-TTY docker exec -it [CONTAINER_ID] [bash/sh] Stop a container docker stop [CONTAINER_ID] # --time , -t Seconds to wait for stop before killing it, default=10 docker stop -t 30 [CONTAINER_ID] </description>
     </item>
     
     <item>
       <title>Common Curl</title>
-      <link>https://qohor-unsullied.github.io/posts/common-curl/</link>
+      <link>https://qohor-unsullied.github.io/try/posts/common-curl/</link>
       <pubDate>Mon, 26 Sep 2022 16:41:42 +0800</pubDate>
       
-      <guid>https://qohor-unsullied.github.io/posts/common-curl/</guid>
+      <guid>https://qohor-unsullied.github.io/try/posts/common-curl/</guid>
       <description>常見curl指令 POST application/json curl -X POST http://localhost:3000/data \ -d &amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39; \ -H &amp;#34;Content-Type: application/json&amp;#34; form data curl -X POST http://localhost:3000/data \ -H &amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34; \ -d &amp;#34;key1=value1&amp;amp;key2=value2&amp;#34; with a data fail curl -d &amp;#34;@data.json&amp;#34; -X POST http://localhost:3000/data Websocket curl -i -N -H &amp;#34;Connection: Upgrade&amp;#34; -H &amp;#34;Upgrade: websocket&amp;#34; -H &amp;#34;Host: localhost:8080&amp;#34; -H &amp;#34;Origin: http://localhost:8080&amp;#34; http://localhost:8080/my-websocket-path </description>
     </item>
     
     <item>
       <title>Install Vim Fail</title>
-      <link>https://qohor-unsullied.github.io/posts/install-vim-fail/</link>
+      <link>https://qohor-unsullied.github.io/try/posts/install-vim-fail/</link>
       <pubDate>Fri, 23 Sep 2022 17:26:23 +0800</pubDate>
       
-      <guid>https://qohor-unsullied.github.io/posts/install-vim-fail/</guid>
+      <guid>https://qohor-unsullied.github.io/try/posts/install-vim-fail/</guid>
       <description>問題描述 在nginx/1.14.2的docker images安裝vim時跳出下列Error
 apt-get install vim Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: libreadline7 readline-common Use &amp;#39;apt autoremove&amp;#39; to remove them. The following additional packages will be installed: libgpm2 vim-common vim-runtime xxd Suggested packages: gpm ctags vim-doc vim-scripts The following NEW packages will be installed: libgpm2 vim vim-common vim-runtime xxd 0 upgraded, 5 newly installed, 0 to remove and 4 not upgraded.</description>
     </item>
     
     <item>
       <title>SSL Handshake Issue</title>
-      <link>https://qohor-unsullied.github.io/posts/ssl-handshake-issue/</link>
+      <link>https://qohor-unsullied.github.io/try/posts/ssl-handshake-issue/</link>
       <pubDate>Fri, 23 Sep 2022 12:47:27 +0800</pubDate>
       
-      <guid>https://qohor-unsullied.github.io/posts/ssl-handshake-issue/</guid>
+      <guid>https://qohor-unsullied.github.io/try/posts/ssl-handshake-issue/</guid>
       <description>問題描述 廠商換了一家新的CDN廠商後，發現原本Nginx Reverse Proxy的Request都會回502，並從Nginx log可以找到以下Error
 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &amp;#34;GET / HTTP/1.1&amp;#34;, upstream: &amp;#34;https://10.YYY.YYY.YYY:443/&amp;#34;, host: &amp;#34;self.backend.com&amp;#34; 2022/09/22 02:39:06 [error] 248#248: *65138446 SSL_do_handshake() failed (SSL: error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:SSL alert number 80) while SSL handshaking to upstream, client: 10.XXX.XXX.XXX, server: self.backend.com, request: &amp;#34;GET / HTTP/1.1&amp;#34;, upstream: &amp;#34;https://10.YYY.YYY.YYY:443/&amp;#34;, host: &amp;#34;self.backend.com&amp;#34; 2022/09/22 02:39:06 [warn] 248#248: *65138446 upstream server temporarily disabled while SSL handshaking to upstream, client: 10.</description>
     </item>
