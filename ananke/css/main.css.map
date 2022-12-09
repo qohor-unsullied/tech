@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/lukefan/Documents/Pratice/blog/blog-tech",
+	"sourceRoot": "/src",
 	"sources": [
 		"stdin"
 	],
